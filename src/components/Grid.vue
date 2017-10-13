@@ -25,7 +25,6 @@
 
 <script>
 import Cell from './Cell.vue'
-
 export default {
   components: {
     Cell
@@ -36,7 +35,7 @@ export default {
       activePlayer: 'O',
       // maintains the status of the game: turn or win or draw
       gameStatus: 'turn',
-      gameStatusMessage: `O's turn`,
+      gameStatusMessage: `0's turn`,
       // status color is used as background color in the status bar
       // it can hold the name of either of the following CSS classes
       // statusTurn (default) is yellow for a turn
@@ -74,8 +73,10 @@ export default {
     // helper property to get the non-active player
     nonActivePlayer() {
       if (this.activePlayer === 'O') {
+        this.gameStatusMessage = `X's turn`
         return 'X'
       }
+      this.gameStatusMessage = `O's turn`
       return 'O'
     }
   },

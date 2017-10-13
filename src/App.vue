@@ -18,7 +18,6 @@
 
 <script>
 import Grid from './components/Grid.vue'
-
 export default {
   components: {
     Grid
@@ -35,7 +34,6 @@ export default {
   },
   methods: {
     restart() {
-      console.log("I'm restarting the game now...");
       Event.$emit('clearCell')
       Event.$emit('gridReset')
       this.matches++
