@@ -36,16 +36,14 @@ export default {
       activePlayer: 'O',
       // maintains the status of the game: turn or win or draw
       gameStatus: 'turn',
-
       gameStatusMessage: `O's turn`,
       // status color is used as background color in the status bar
       // it can hold the name of either of the following CSS classes
       // statusTurn (default) is yellow for a turn
       // statusWin is green for a win
       // statusDraw is purple for a draw
-
       gameStatusColor: 'statusTurn',
-      // # of moves played by both players in a single game (max = 9)
+      // no. of moves played by both players in a single game (max = 9)
       moves: 0,
       // stores the placement of X and O in cells by their cell number
       cells: {
@@ -57,7 +55,7 @@ export default {
         6: '',
         7: '',
         8: '',
-        9: '',
+        9: ''
       },
       // contains all (8) possible winning conditions
       winConditions: [
@@ -149,24 +147,22 @@ export default {
       return true;
     }
   },
-  // listening for strike made by user on cell, from the Cell component
   created() {
+    // listens for a strike made by the user on cell
+    // it is called by the Cell component
     Event.$on('strike', (cellNumber) => {
       // sets either X or O in the clicked cell of the cells array
       this.cells[cellNumber] = this.activePlayer
-
-      // increments the # of moves
+      // increments the number of moves
       this.moves++
-
         // stores the game status by calling the changeGameStatus method
         this.gameStatus = this.changeGameStatus()
-
       this.changePlayer()
     })
-
-    // listens for a restart button press to reinitialized the data component from the App component
+    // listens for a restart button press
+    // the data of the component is reinitialized
+    // it is called by the App component
     Event.$on('gridReset', () => {
-      console.log("I'm reseting the grid now....");
       Object.assign(this.$data, this.$options.data())
     })
   }
