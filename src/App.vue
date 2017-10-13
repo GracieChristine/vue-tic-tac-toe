@@ -10,6 +10,7 @@
       <h1>Tic Tac Toe</h1>
     </div>
     <grid></grid>
+    <button class="restart" @click="restart">Restart</button>
   </div>
 </div>
 </template>
@@ -29,6 +30,14 @@ export default {
         O: 0,
         X: 0
       }
+    }
+  },
+  methods: {
+    restart() {
+      console.log("I'm restarting the game now...");
+      Event.$emit('clearCell')
+      Event.$emit('gridReset')
+      this.matches++
     }
   },
   created() {

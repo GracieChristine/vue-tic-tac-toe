@@ -163,6 +163,12 @@ export default {
 
       this.changePlayer()
     })
+
+    // listens for a restart button press to reinitialized the data component from the App component
+    Event.$on('gridReset', () => {
+      console.log("I'm reseting the grid now....");
+      Object.assign(this.$data, this.$options.data())
+    })
   }
 }
 </script>
