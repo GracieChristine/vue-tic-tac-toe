@@ -26,6 +26,9 @@ export default {
         Event.$emit('strike', this.name)
       }
     }
+  },
+  create() {
+    Event.$on('freeze', () => this.frozen = true)
   }
 }
 </script>
