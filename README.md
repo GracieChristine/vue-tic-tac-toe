@@ -1,6 +1,6 @@
 # vue-tic-tac-toe
 
-> A Vue.js project
+A tic tac toe game build with Vue 2.
 
 ## Build Setup
 
