@@ -49,7 +49,7 @@ export default {
 body {
   background-color: #fff;
   color: #fff;
-  font-family: 'Dosis', Helvetica, sans-serif;
+  font-family: 'Satisfy', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -74,7 +74,7 @@ h1 {
   border: 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  font-family: 'Dosis', Helvetica, sans-serif;
+  font-family: 'Satisfy', cursive;
   font-size: 1.4em;
   font-weight: bold;
   margin: 0px;

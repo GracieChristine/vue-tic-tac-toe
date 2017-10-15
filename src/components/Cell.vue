@@ -41,7 +41,7 @@ export default {
   height: 90px;
   border: 6px solid #2c3e50;
   font-size: 3.5em;
-  font-family: 'Gochi Hand', sans-serif;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .cell:hover {
