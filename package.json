@@ -1,6 +1,6 @@
 {
   "name": "vue-tic-tac-toe",
-  "description": "A Vue.js project",
+  "description": "A tic-tac-toe game built with vue 2 and webpack simple.",
   "version": "1.0.0",
   "author": "GracieChristine <graciechristineli@gmail.com>",
   "private": true,
